@@ -5,9 +5,15 @@
 }
 
 
+html {
+  position:relative;
+  min-height: 100%;
+}
+
+
 main {
     display: flex;
-    flex-direction: row;
+    height: 90%;
 }
 
 p {
@@ -16,15 +22,18 @@ p {
 }
 
 aside{
-    width: 25%;
-    padding-left: 20px;
-    padding-right: 30px;
+    min-width: 20%;
+    margin-bottom: 50px;
+
 
 }
 
+
+
+
+
 h3 {
     padding-left: 1px;
-    margin-left: -50px
 }
 
 #table {
@@ -38,21 +47,52 @@ h3 {
     padding-top: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
-    margin-left: -50px;
+    margin-right: 100px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 1);
+
 }
+
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
+  padding: 0;
+  border: 0;
+  max-width: 2560px;
+    margin: 0 auto;
+    line-height: 1.1em;
+    background-color: white;
+    margin: 0 0 100px;
+    /* bottom = footer height */
+    padding: 25px;
+}
+
+html, body {
+  padding:0;
+   margin:0;
+    height:100%;
+  }
+
+
+
+body > header {
+    text-align: center;
+    color: white;
+    padding: 5px 0 0;
+    background: #feccb1;
+    background: -moz-linear-gradient(top, #feccb1 0%, #f17432 61%, #f17432 61%, #ea5507 62%, #fb955e 100%);
+    background: -webkit-linear-gradient(top, #feccb1 0%, #f17432 61%, #f17432 61%, #ea5507 62%, #fb955e 100%);
+    background: linear-gradient(to bottom, #feccb1 0%, #f17432 61%, #f17432 61%, #ea5507 62%, #fb955e 100%);
 }
 
 /* Style the header */
 .header {
-  padding: 80px;
+  padding: 50px;
   text-align: center;
   background: #000;
   color: white;
     padding-bottom: 10px;
+    width: 100%;
+
 }
 
 /* Increase the font size of the h1 element */
@@ -69,6 +109,8 @@ body {
 .navbar {
   overflow: hidden;
   background-color: #333;
+  width: 100%;
+  margin-bottom: 100px;
 }
 
 table
@@ -86,13 +128,33 @@ td, th /* Mettre une bordure sur les td ET les th */
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 20px;
+  padding: 5px 15px;
   text-decoration: none;
 }
 
 /* Right-aligned link */
-.navbar a.right {
+nav .navbar a.right {
   float: right;
+}
+
+.rotateimg90{
+  -webkit-transform:rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  width:1000; height:200;
+}
+
+div img{
+  margin-top: -150px;
+  margin-left: 200px;
+}
+
+.images{
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: 100px;
 }
 
 /* Change color on hover */
@@ -102,21 +164,50 @@ td, th /* Mettre une bordure sur les td ET les th */
 }
 
 footer {
+  margin-top: 30px;
     background-color: #000;
-    bottom: 10px;
-    margin-bottom: 10px;
-
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 
-#textbox1{
-    margin-right: auto;
-    margin-left: auto;
+
+.menu-toggle{
+  float: right;
+  line-height: 50px;
+  font-size: 24px;
+  display:none;
+  cursor: pointer;
 }
 
-@media screen and (max-width:480px) {
+    img#logo {
+    min-width: 125px;
+    width: 20%;
+    max-width: 250px;
+}
+
+
+@media screen and (max-width: 1000px) {
     main {
-            flex-direction: column;
+        flex-direction: column;
+        margin-left: 30px;
     }
 
-}
+    ul {
+        flex-direction: column;
+        padding-left: 0;
+    }
 
+    ul .menu-toggle {
+        display: block;
+        margin: 0 auto 10px;
+    }
+
+    ul li img {
+        width: 32px;
+        height: 32px;
+        margin: 4px 0 0 0 ;
+        padding: 0;
+        display: block;
+    }
+}
