@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+    <title>624-2 - HTML/CSS/JavaScript</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="ressources/css/style_start.css">
+</head>
+<body>
+
+<div class="header">
+    <h1>CONTAGION</h1>
+    <p> Beware and you may survive...</p>
+    </div>
+
+    <ul class="navbar">
+        <a href="description_start.html">Description</a>
+        <a href="maquettes_start.html">Maquettes</a>
+        <a href="mockup_start.html">Mockup</a>
+        <a href="flux_start.html">Flux</a>
+        <a href="journal_de_bord_start.html">Journal de bord</a>
+        <a href="jeu.html">Jeu</a>
+    </ul>
+
+
+<main>
+   <div id="blocDemarrage" class="bloc">
+        <h1 class="titre">CONTAGION</h1>
+        <button class="btn" id="playbtn">PLAY</button>
+        <button class="btn" id="scoresbtn">SCORES</button>
+        <button class="btn" id="regleJeubtn">REGLES DU JEU</button>
+        <button class="btn" id="retour">SORTIR</button>
+    </div>
+
+    <div id="regleJeu" class="bloc">
+
+        <h1>Comment jouer ?</h1>
+
+        <h2>Règles du jeu</h2>
+
+        <p>La règle est simple : Finissez le niveua et survivez ! <br/> Mais attention les zombies ne vous laisseront aucun répit<br/>
+
+        <h2>Commandes</h2>
+
+        <p>Utilise les touches WASD de ton clavier pour te diriger. <br/> La touche ESPACE permet de tirer avec ton arme</p>
+
+    </div>
+
+    <div class="bloc" id="scorediv">
+
+        <img class="btn" id="redCrossScore" src="../ressources/images/close.png">
+
+        <h1>Tableau des scores</h1>
+
+        <select name="niveau" id="choixNiveau">
+            <option>Level 1</option>
+            <option>Level 2</option>
+            <option>Level 3</option>
+        </select>
+
+        <table id="scoreTableau">
+            <thead>
+                <tr>
+                    <th>Classement</th>
+                    <th>Pseudo</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody id="tbodyScore">
+
+            </tbody>
+        </table>
+
+    </div>
+
+</main>
+
+    <footer>
+        <img id="logo" src="ressources/images/logo.png" height="50">
+    </footer>
+
+</body>
+</html>
